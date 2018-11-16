@@ -1,6 +1,8 @@
 import React from 'react';
 
-const PaintingShow = ({ painting }) => {
+const PaintingShow = ({ painting, handleDeleteButton }) => {
+
+  console.log(painting.museum)
   return (
     <div className="ui card">
       <div className="image">
@@ -20,7 +22,7 @@ const PaintingShow = ({ painting }) => {
           </p>
           <p>{painting.artist.hometown}</p>
         </div>
-        <div className="ui basic red right aligned button">Delete</div>
+        <div onClick={handleDeleteButton}className="ui basic red right aligned button">Delete</div>
       </div>
     </div>
   );
